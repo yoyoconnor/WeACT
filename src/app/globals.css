@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --weact-gold: #f6c343;
+  --weact-purple: #8e44ad;
 }
 
 @theme inline {
@@ -16,6 +18,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --weact-gold: #f6c343;
+    --weact-purple: #8e44ad;
   }
 }
 
