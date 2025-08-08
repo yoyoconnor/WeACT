@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import ModulesSidebar from "../ModulesSidebar";
 
 type ThermometerProps = { progress: number };
 
@@ -65,14 +66,7 @@ export default function WeeklyModulesDashboard() {
       <Headbar />
       <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
         {/* Sidebar */}
-        <div className="flex flex-col items-center py-8 px-2 bg-gradient-to-b from-yellow-300 to-yellow-500" style={{ width: 165, minHeight: '100vh' }}>
-          <div className="flex flex-col items-center">
-            <Thermometer progress={progress} />
-            <div className="text-white text-2xl text-center" style={{ marginTop: '20px', lineHeight: 1.1 }}>
-              Modules<br /><span className="font-extrabold">Progress</span>
-            </div>
-          </div>
-        </div>
+        <ModulesSidebar progress={progress} />
         {/* Main Content */}
         <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1">
