@@ -59,7 +59,7 @@ export default function Module4() {
                 BACK
               </Link>
               <Link href="/weekly-modules/module4/mindful-breathing" className="px-6 py-3 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
-                Quick Check
+                NEXT
               </Link>
             </div>
           </div>
