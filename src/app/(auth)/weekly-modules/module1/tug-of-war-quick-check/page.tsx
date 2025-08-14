@@ -1,7 +1,7 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
+// Removed unused Image import
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 import { useState } from 'react';
@@ -18,11 +18,11 @@ export default function TugOfWarQuickCheck() {
   const getFeedbackMessage = (response: string) => {
     switch (response) {
       case 'YES':
-        return "That's a brave choice! Letting go of the struggle creates space for you to focus on the things that truly matter. Remember, the thoughts and emotions don't have to go away for you to keep moving toward a meaningful life.";
+        return "That&apos;s a brave choice! Letting go of the struggle creates space for you to focus on the things that truly matter. Remember, the thoughts and emotions don&apos;t have to go away for you to keep moving toward a meaningful life.";
       case 'NO':
-        return "Uncertainty is completely normal! Letting go can feel like a big step, and it's okay to take your time. You might start by gently loosening your grip and see how it feels. You don't need to have all the answers right away.";
+        return "Uncertainty is completely normal! Letting go can feel like a big step, and it&apos;s okay to take your time. You might start by gently loosening your grip and see how it feels. You don&apos;t need to have all the answers right away.";
       case 'NOT SURE':
-        return "It's okay if you're not ready to stop digging just yet. Sometimes, holding on feels safer. Just know that when you're ready, there's another way to live alongside your difficult thoughts and feelings without the exhausting struggle.";
+        return "It&apos;s okay if you&apos;re not ready to stop digging just yet. Sometimes, holding on feels safer. Just know that when you&apos;re ready, there&apos;s another way to live alongside your difficult thoughts and feelings without the exhausting struggle.";
       default:
         return "";
     }
@@ -44,11 +44,11 @@ export default function TugOfWarQuickCheck() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={10} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>

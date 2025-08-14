@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 export default function ModulesSidebar({ progress }: { progress: number }) {
   // Clamp progress for positive and negative ranges
@@ -9,8 +8,11 @@ export default function ModulesSidebar({ progress }: { progress: number }) {
   const negativeFill = isNegative ? `${Math.abs(clampedProgress)}%` : '0%';
 
   return (
-    <div className="flex flex-col items-center py-8 px-2 bg-gradient-to-b from-yellow-300 to-yellow-500" style={{ width: 165, minHeight: '100vh' }}>
-      <div className="flex flex-col items-center">
+    <div
+      className="flex flex-col items-center py-8 px-2 bg-gradient-to-b from-yellow-300 to-yellow-500 sticky top-[100px] self-start"
+      style={{ width: 165, height: 'calc(100vh - 100px)' }}
+    >
+      <div className="flex flex-col items-center w-full h-full">
         {/* Thermometer */}
         <div className="flex flex-col items-center" style={{ marginTop: '60px' }}>
           <div className="w-12 h-48 bg-white relative overflow-hidden border-x-8 border-t-8 border-white rounded-t-full rounded-b-none z-10">
@@ -37,6 +39,7 @@ export default function ModulesSidebar({ progress }: { progress: number }) {
           </div>
           <div className="mt-4 text-lg font-bold text-white text-center">Modules<br /><span className="font-extrabold">Progress</span></div>
         </div>
+        <div className="flex-1" />
       </div>
     </div>
   );

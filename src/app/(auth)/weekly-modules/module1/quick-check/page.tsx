@@ -1,7 +1,7 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
+// Removed unused Image import
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 import { useState } from 'react';
@@ -18,11 +18,11 @@ export default function QuickCheck() {
   const getFeedbackMessage = (response: string) => {
     switch (response) {
       case 'YES':
-        return "Fantastic! You're taking a meaningful step. Keep moving forward with your commitment.";
+        return "Fantastic! You&apos;re taking a meaningful step. Keep moving forward with your commitment.";
       case 'NO':
-        return "That's okay! It's great that you're being honest with yourself. Readiness can come with time.";
+        return "That&apos;s okay! It&apos;s great that you&apos;re being honest with yourself. Readiness can come with time.";
       case 'NOT SURE':
-        return "That's completely understandable! Uncertainty is a part of growth. You don't need to be 100% sure to take the first step—just stay curious and open to the experience.";
+        return "That&apos;s completely understandable! Uncertainty is a part of growth. You don&apos;t need to be 100% sure to take the first step—just stay curious and open to the experience.";
       default:
         return "";
     }
@@ -31,11 +31,11 @@ export default function QuickCheck() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={0} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>

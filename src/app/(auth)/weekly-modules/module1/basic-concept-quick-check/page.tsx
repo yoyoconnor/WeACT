@@ -1,7 +1,7 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
+// Removed unused Image import
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 import { useState } from 'react';
@@ -20,9 +20,9 @@ export default function BasicConceptQuickCheck() {
       case 'YES':
         return "Wonderful! Recognizing the value of responding to your thoughts and emotions in new ways is a powerful step. Every small action you take can bring you closer to living a life that truly matters to you.";
       case 'NO':
-        return "That's completely okay! It's important to honor where you are right now. Sometimes it takes time to feel ready.";
+        return "That&apos;s completely okay! It&apos;s important to honor where you are right now. Sometimes it takes time to feel ready.";
       case 'NOT SURE':
-        return "Feeling uncertain is natural! It can be hard to know what's right until you start exploring. You don't have to have all the answers now—just consider experimenting with small steps and see where it leads.";
+        return "Feeling uncertain is natural! It can be hard to know what&apos;s right until you start exploring. You don&apos;t have to have all the answers now—just consider experimenting with small steps and see where it leads.";
       default:
         return "";
     }
@@ -31,11 +31,11 @@ export default function BasicConceptQuickCheck() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={20} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>

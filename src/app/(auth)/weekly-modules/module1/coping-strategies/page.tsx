@@ -1,7 +1,7 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
+// Removed unused Image import
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 import { useState } from 'react';
@@ -36,18 +36,18 @@ export default function CopingStrategies() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={40} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col bg-[#fdfaf5] min-h-screen">
-          <div className="flex flex-col items-center w-full px-10 pt-10 pb-10 flex-1 max-w-4xl mx-auto">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
+          <div className="flex flex-col items-center w-full px-4 pt-8 flex-1 max-w-2xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>
             <div className="w-full text-xl font-semibold text-gray-700 mb-6">My Coping Strategies</div>
             
             {/* Main Content Card */}
-            <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-3xl flex-1">
+            <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-3xl">
               <div className="flex items-start gap-6 mb-8">
                 <div className="w-20 h-20 bg-blue-400 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg width="40" height="40" fill="white" viewBox="0 0 24 24">
@@ -195,7 +195,7 @@ export default function CopingStrategies() {
             </div>
             
             {/* Navigation Buttons */}
-            <div className="flex justify-between w-full max-w-3xl mt-6">
+            <div className="flex justify-between w-full max-w-3xl mt-6 mb-8">
               <Link href="/weekly-modules/module1/basic-concept-quick-check" className="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-400 transition-colors">
                 BACK
               </Link>

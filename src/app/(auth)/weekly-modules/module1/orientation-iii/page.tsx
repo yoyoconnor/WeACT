@@ -9,11 +9,11 @@ export default function OrientationIII() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={0} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>
@@ -35,17 +35,17 @@ export default function OrientationIII() {
               <div className="flex-1">
                 <div className="font-bold text-lg text-gray-900 mb-2">Transcript</div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  This program is structured to be completed over 6 weekly modules within 8 weeks. You are expected to engage with the "Daily Practice" exercises at least three days per week.
+                  This program is structured to be completed over 6 weekly modules within 8 weeks. You are expected to engage with the &quot;Daily Practice&quot; exercises at least three days per week.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
                   ACT is a hands-on, active approach. You are the expert on your own life and experiences. The exercises and practices in this program are designed to help you develop new ways of responding to your thoughts and emotions.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  Remember, you don't need to be perfect. Every small step you take can bring you closer to living a life that truly matters to you.
+                  Remember, you don&apos;t need to be perfect. Every small step you take can bring you closer to living a life that truly matters to you.
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <img src="/weekly-modules/thumbnails/module3.png" alt="Yellow Flowers" width={260} height={260} className="rounded-xl mb-2" />
+                <Image src="/weekly-modules/thumbnails/module3.png" alt="Yellow Flowers" width={260} height={260} className="rounded-xl mb-2" />
                 <div className="text-xs text-gray-500 text-center max-w-[220px]">Image source: Unsplash</div>
               </div>
             </div>

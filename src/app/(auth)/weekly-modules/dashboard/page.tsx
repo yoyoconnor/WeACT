@@ -6,47 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ModulesSidebar from "../ModulesSidebar";
 
-type ThermometerProps = { progress: number };
-
-function Thermometer({ progress }: ThermometerProps) {
-  // Clamp progress for positive and negative ranges
-  const clampedProgress = Math.min(Math.max(progress, -20), 100); // Allow up to -20% for visual effect
-  const isNegative = clampedProgress < 0;
-  const positiveFill = isNegative ? '0%' : `${clampedProgress}%`;
-  const negativeFill = isNegative ? `${Math.abs(clampedProgress)}%` : '0%';
-
-  return (
-    <div className="flex flex-col items-center" style={{ marginTop: '152px' }}>
-      {/* Thermometer Tube */}
-      <div className="w-12 h-48 bg-white relative overflow-hidden border-x-8 border-t-8 border-white rounded-t-full rounded-b-none z-10" style={{ top: '2px' }}>
-        {/* Light purple full fill */}
-        <div className="absolute bottom-0 left-0 w-full h-full bg-purple-300" />
-        {/* Negative (red) fill for negative progress */}
-        {isNegative && (
-          <div
-            className="absolute bottom-0 left-0 w-full bg-red-400 animate-pulse"
-            style={{ height: negativeFill, zIndex: 20, opacity: 0.7 }}
-          />
-        )}
-        {/* Dark purple overlay fill for progress with flat top */}
-        {!isNegative && (
-          <div
-            className="absolute bottom-0 left-0 w-full overflow-hidden"
-            style={{ height: positiveFill }}
-          >
-            <div className="w-full h-full bg-[#a13eb7]" />
-          </div>
-        )}
-      </div>
-      {/* Bulb (always full, color depends on sign) */}
-      <div className="relative z-0" style={{ marginTop: '-1.5rem', top: '14px' }}>
-        <div className={`w-20 h-20 rounded-full flex items-center justify-center shadow-xl border-8 border-white ${isNegative ? 'bg-red-500' : 'bg-[#a13eb7]'}`}>
-          <span className={`text-white text-2xl font-bold relative z-10 ${isNegative ? 'text-red-100' : ''}`}>{Math.floor(clampedProgress)}%</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+// Removed unused Thermometer component and type
 
 export default function WeeklyModulesDashboard() {
   const { data: session } = useSession();
@@ -64,11 +24,11 @@ export default function WeeklyModulesDashboard() {
   return (
     <div className="min-h-screen w-full bg-[#232634] flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={progress} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1">
             <div className="text-4xl font-bold text-gray-800 mb-2">
               Hi <span className="text-[var(--weact-purple)]">{userName}!</span>

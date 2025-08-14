@@ -1,7 +1,7 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
+// Removed unused Image import
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 
@@ -9,11 +9,11 @@ export default function TugOfWarMetaphor() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={10} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>
@@ -35,16 +35,16 @@ export default function TugOfWarMetaphor() {
               <div className="flex-1">
                 <div className="font-bold text-lg text-gray-900 mb-2">Transcript</div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  Imagine you're in a tug-of-war with a monster. The monster represents your difficult thoughts, anxiety, stress, or any other challenging emotions you experience.
+                  Imagine you&apos;re in a tug-of-war with a monster. The monster represents your difficult thoughts, anxiety, stress, or any other challenging emotions you experience.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  You're pulling as hard as you can on your end of the rope, trying to win this battle. But the harder you pull, the harder the monster pulls back. The struggle is exhausting and consumes all your energy and focus.
+                  You&apos;re pulling as hard as you can on your end of the rope, trying to win this battle. But the harder you pull, the harder the monster pulls back. The struggle is exhausting and consumes all your energy and focus.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  You're so focused on winning this tug-of-war that you don't notice there's a pit of quicksand between you and the monster. The more you struggle, the deeper you sink.
+                  You&apos;re so focused on winning this tug-of-war that you don&apos;t notice there&apos;s a pit of quicksand between you and the monster. The more you struggle, the deeper you sink.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  But here's the thing: you can drop the rope. When you do, the monster disappears. You're no longer stuck in this exhausting struggle, and you can focus on what truly matters to you.
+                  But here&apos;s the thing: you can drop the rope. When you do, the monster disappears. You&apos;re no longer stuck in this exhausting struggle, and you can focus on what truly matters to you.
                 </div>
               </div>
               <div className="flex flex-col items-center">

@@ -1,7 +1,7 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
+// Removed unused Image import
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 import { useState } from 'react';
@@ -18,11 +18,11 @@ export default function ManInTheHoleQuickCheck() {
   const getFeedbackMessage = (response: string) => {
     switch (response) {
       case 'YES':
-        return "That's a powerful realization! By letting go of the need to control your thoughts and feelings, you open yourself up to new ways of navigating your emotions. It allows you to focus on what truly matters rather than getting stuck in the struggle.";
+        return "That&apos;s a powerful realization! By letting go of the need to control your thoughts and feelings, you open yourself up to new ways of navigating your emotions. It allows you to focus on what truly matters rather than getting stuck in the struggle.";
       case 'NO':
-        return "It's completely normal to feel unsure! Letting go of control can feel like a big step, and it's okay to take your time exploring this idea. You don't need to have it all figured out right now—perhaps start by noticing when you're reaching for the shovel and reflect on what might happen if you paused for a moment instead.";
+        return "It&apos;s completely normal to feel unsure! Letting go of control can feel like a big step, and it&apos;s okay to take your time exploring this idea. You don&apos;t need to have it all figured out right now—perhaps start by noticing when you&apos;re reaching for the shovel and reflect on what might happen if you paused for a moment instead.";
       case 'NOT SURE':
-        return "It's okay if you're not ready to stop digging just yet. Sometimes, trying to control things feels like the only option. When you're ready, consider that there might be other ways to work with your thoughts and feelings without getting stuck in the same patterns.";
+        return "It&apos;s okay if you&apos;re not ready to stop digging just yet. Sometimes, trying to control things feels like the only option. When you&apos;re ready, consider that there might be other ways to work with your thoughts and feelings without getting stuck in the same patterns.";
       default:
         return "";
     }
@@ -44,11 +44,11 @@ export default function ManInTheHoleQuickCheck() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={0} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>

@@ -1,7 +1,6 @@
 "use client";
 
 import Headbar from '../../../../Headbar';
-import Image from 'next/image';
 import ModulesSidebar from "../../ModulesSidebar";
 import Link from 'next/link';
 
@@ -9,11 +8,11 @@ export default function ManInTheHoleMetaphor() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={10} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>
@@ -35,10 +34,10 @@ export default function ManInTheHoleMetaphor() {
               <div className="flex-1">
                 <div className="font-bold text-lg text-gray-900 mb-2">Transcript</div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  Imagine you're in a deep hole. You didn't plan to be there, but there you are. You have a shovel, and you start digging to get out. But the more you dig, the deeper the hole gets.
+                  Imagine you&apos;re in a deep hole. You didn&apos;t plan to be there, but there you are. You have a shovel, and you start digging to get out. But the more you dig, the deeper the hole gets.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  This is what often happens when we try to control or eliminate our difficult thoughts and emotions. We think that if we just try harder, think more positively, or avoid certain situations, we'll feel better. But often, these strategies make things worse.
+                  This is what often happens when we try to control or eliminate our difficult thoughts and emotions. We think that if we just try harder, think more positively, or avoid certain situations, we&apos;ll feel better. But often, these strategies make things worse.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
                   Your thoughts and feelings are like shovels that you keep using to dig deeper. The harder you try to control them, the more they seem to control you. Digging is useless in some circumstances.

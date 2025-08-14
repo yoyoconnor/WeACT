@@ -9,11 +9,11 @@ export default function BasicConcept() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-yellow-300 to-yellow-100 flex flex-col">
       <Headbar />
-      <div className="flex flex-row w-full h-full" style={{ minHeight: '100vh', maxWidth: '100vw' }}>
+      <div className="flex flex-row w-full h-[calc(100vh-100px)] min-h-0 max-w-[100vw]">
         {/* Sidebar */}
         <ModulesSidebar progress={20} />
         {/* Main Content */}
-        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] min-h-screen p-0">
+        <div className="flex-1 flex flex-col items-center justify-start bg-[#fdfaf5] h-full overflow-y-auto p-0">
           <div className="flex flex-col items-center w-full px-10 pt-10 flex-1 max-w-4xl mx-auto">
             {/* Module Title */}
             <div className="w-full text-2xl font-bold text-gray-900 mb-2">Module 1. Creative Hopelessness</div>
@@ -35,7 +35,7 @@ export default function BasicConcept() {
               <div className="flex-1">
                 <div className="font-bold text-lg text-gray-900 mb-2">Transcript</div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
-                  Imagine holding your hands in front of your face, covering your eyes. While your hands are there, it's difficult to see what's around you, and it's hard to do other things effectively.
+                  Imagine holding your hands in front of your face, covering your eyes. While your hands are there, it&apos;s difficult to see what&apos;s around you, and it&apos;s hard to do other things effectively.
                 </div>
                 <div className="mb-6 text-gray-800 text-lg font-normal">
                   This is similar to how we often respond to difficult thoughts and emotions. We try to push them away, avoid them, or control them, but this struggle often makes it harder to live the life we want.
@@ -45,7 +45,7 @@ export default function BasicConcept() {
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <img src="/weekly-modules/thumbnails/module4.png" alt="Bird in Cage" width={260} height={260} className="rounded-xl mb-2" />
+                <Image src="/weekly-modules/thumbnails/module4.png" alt="Bird in Cage" width={260} height={260} className="rounded-xl mb-2" />
                 <div className="text-xs text-gray-500 text-center max-w-[220px]">Image source: Unsplash</div>
               </div>
             </div>
